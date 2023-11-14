@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import { ReactComponent as CloseMenu } from "../assets/close.svg";
 import { ReactComponent as MenuIcon } from "../assets/menu.svg";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const [click, setClick] = useState(false);
@@ -17,22 +18,22 @@ const Nav = () => {
         </div>
         <ul className={click ? "nav-options active" : "nav-options"}>
           <li className="option" onClick={closeMobileMenu}>
-            <a href="#">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li className="option" onClick={closeMobileMenu}>
-            <a href="#">About</a>
+            <Link to="/about">About</Link>
           </li>
           <li className="option" onClick={closeMobileMenu}>
-            <a href="#">Menu</a>
+            <Link to="/about">Menu</Link>
           </li>
           <li className="option" onClick={closeMobileMenu}>
-            <a href="#">Reservations</a>
+            <Link to="/Booking">Reservations</Link>
           </li>
           <li className="option" onClick={closeMobileMenu}>
-            <a href="">Order Online</a>
+            <Link to="/order">Order Online</Link>
           </li>
           <li className="option" onClick={closeMobileMenu}>
-            <a href="">Login</a>
+            <Link to="/login">Login</Link>
           </li>
         </ul>
       </div>
