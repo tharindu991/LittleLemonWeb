@@ -3,7 +3,7 @@ import "./App.css";
 // import Footer from "./components/Footer";
 // import Main from "./components/Main";
 import Home from "./pages/Home";
-import Booking from "./pages/Booking";
+import BookingPage from "./pages/BookingPage";
 
 import { Routes, Route } from "react-router-dom";
 
@@ -16,7 +16,7 @@ function App() {
 	  </nav> */}
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/booking" element={<Booking />}></Route>
+        <Route path="/booking" element={<BookingPage />}></Route>
       </Routes>
     </div>
   );

@@ -2,6 +2,7 @@ import Hero from "./Hero";
 import restaurantfood from "../assets/restaurantfood.jpg";
 import Button from "./Button";
 import Card from "./Card";
+import { specials } from "../Constants";
 
 function Main() {
   return (
@@ -21,9 +22,9 @@ function Main() {
         </div>
 
         <div className="specials-card-wrapper">
-          <Card />
-          <Card />
-          <Card />
+          {specials.map((item) => (
+            <Card {...item} />
+          ))}
         </div>
       </div>
     </main>
