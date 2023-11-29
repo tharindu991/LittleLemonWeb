@@ -19,7 +19,7 @@ const BookingPage = () => {
     console.log(">>>>>>action>>>>", action);
 
     // return state;
-    return ["18:00", "19:00", "20:00", "22:00"];
+    return ["16:00", "19:00", "20:00", "22:00"];
   };
 
   //which will create the initial state for the availableTimes.
