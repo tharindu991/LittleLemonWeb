@@ -11,21 +11,33 @@ const BookingForm = (props) => {
     occasions,
     setOccation,
     occasion,
+    submitForm,
   } = props;
 
-  const handleAvailableTimes = (selectedDate) => {
-    setDate(selectedDate);
+  // var defaultDate = date.toISOString().substring(0, 10);
 
-    dispatchAvailableTimes(selectedDate);
+  const handleAvailableTimes = (selectedDate) => {
+    setDate(new Date(selectedDate));
+    dispatchAvailableTimes(new Date(selectedDate));
   };
 
   return (
-    <form className="booking-form">
+    <form
+      className="booking-form"
+      onSubmit={() =>
+        submitForm({
+          date: date,
+          time: time,
+          numOfGuests: numOfGuests,
+          occasion: occasion,
+        })
+      }
+    >
       <label htmlFor="res-date">Choose date</label>
       <input
         type="date"
         id="res-date"
-        value={date}
+        // defaultValue={defaultDate}
         onChange={(e) => handleAvailableTimes(e.target.value)}
       />
       <label htmlFor="res-time">Choose time</label>
@@ -53,9 +65,8 @@ const BookingForm = (props) => {
         onChange={(e) => setOccation(e.target.value)}
         value={occasion}
       >
-        {occasions.map((item) => (
-          <option key={item}>{item}</option>
-        ))}
+        {occasions &&
+          occasions.map((item) => <option key={item}>{item}</option>)}
       </select>
       <input type="submit" value="Make Your reservation" />
     </form>
