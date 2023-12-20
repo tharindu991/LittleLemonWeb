@@ -113,6 +113,7 @@ h3 {
   display: flex;
   justify-content: center;
   border: none;
+  cursor: pointer;
 }
 
 /* specials */
@@ -346,11 +347,27 @@ h3 {
 
   padding: 20px;
   display: grid;
-  width: 250px;
+  width: 300px;
   gap: 20px;
 
-  height: 400px;
+  height: 450px;
   background-color: #ffffff;
+}
+
+.submit-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-field-container {
+  padding: 10px;
+  border: 1px solid rgb(224, 204, 204);
+  border-radius: 3px;
+}
+
+.form-field-error {
+  color: red;
 }
 
 /* footer */
