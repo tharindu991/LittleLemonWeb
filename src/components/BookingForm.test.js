@@ -39,7 +39,7 @@ describe("Booking form", () => {
       />
     );
 
-    const submitButton = screen.getByText("Make Your reservation");
+    const submitButton = screen.getByText("Make Reservation");
     fireEvent.click(submitButton);
 
     expect(submitForm).toHaveBeenCalledWith({
@@ -47,6 +47,29 @@ describe("Booking form", () => {
       time: availableTimes[0],
       numOfGuests: 1,
       occasion: "Birthday",
+    });
+  });
+
+  test("should not allow to submit with incorrect values", () => {
+    render(
+      <BookingForm
+        date={today}
+        time={availableTimes[0]}
+        numOfGuests={1}
+        occasion="Birthday"
+        availableTimes={availableTimes}
+        submitForm={submitForm}
+      />
+    );
+
+    const submitButton = screen.getByText("Make Reservation");
+    fireEvent.click(submitButton);
+
+    expect(submitForm).not.toHaveBeenCalledWith({
+      date: "",
+      time: "",
+      numOfGuests: 0,
+      occasion: "",
     });
   });
 });
