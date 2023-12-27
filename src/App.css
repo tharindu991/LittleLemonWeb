@@ -214,6 +214,7 @@ h3 {
   flex-direction: row;
   justify-content: start;
   align-items: center;
+  cursor: pointer;
 }
 .card-action-icon {
   height: 20px;
@@ -362,8 +363,9 @@ h3 {
 
 .form-field-container {
   padding: 10px;
-  border: 1px solid rgb(224, 204, 204);
-  border-radius: 3px;
+  background-color: #edefee;
+  /* border: 1px solid rgb(224, 204, 204); */
+  border-radius: 4px;
 }
 
 .form-field-error {
@@ -403,4 +405,15 @@ h3 {
 }
 footer section {
   margin: 10px;
+}
+
+.confirmed-booking-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.confirmed-text {
+  font-weight: 600;
+  font-size: 25px;
 }

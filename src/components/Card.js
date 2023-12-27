@@ -1,7 +1,7 @@
 import delivery from "../assets/delivery.png";
 
 function Card(props) {
-  const { name, image, description, actionText, price } = props;
+  const { name, image, description, actionText, price, onClick } = props;
   return (
     <div className="card-container">
       <img src={image} alt="Greek Salad" className="card-img" />
@@ -13,7 +13,7 @@ function Card(props) {
         </div>
 
         <p>{description}</p>
-        <div className="card-action-container">
+        <div className="card-action-container" onClick={onClick}>
           <h6>{actionText}</h6>
           <img className="card-action-icon" src={delivery} alt="delivery" />
         </div>

@@ -6,7 +6,7 @@ function Home() {
   return (
     <div>
       <Nav />
-      <Main />
+      <Main showHero={true} />
       <Footer />
     </div>
   );
