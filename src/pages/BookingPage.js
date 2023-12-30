@@ -1,6 +1,7 @@
 import BookingForm from "../components/BookingForm";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
+import Title from "../components/Title";
 import { useState, useReducer, useEffect } from "react";
 import { fetchAPI, submitAPI } from "../utils/Api";
 import { useNavigate } from "react-router-dom";
@@ -27,7 +28,7 @@ const BookingPage = () => {
   // which will create the initial state for the availableTimes.
   const initializeTimes = (initialAvailableTimes) => [
     ...initialAvailableTimes,
-    ...fetchAPI(new Date()),
+    [],
   ];
 
   const [availableTimes, dispatchAvailableTimes] = useReducer(
@@ -47,6 +48,8 @@ const BookingPage = () => {
     <>
       <Nav />
       <div className="booking-page-container">
+        <Title text={"Table Reservation"} />
+
         <BookingForm
           date={date}
           setDate={setDate}

@@ -1,16 +1,14 @@
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import Main from "../components/Main";
+import Title from "../components/Title";
 
 function Home() {
   return (
     <div>
       <Nav />
-      <div className="global-padding-vertical confirmed-booking-container">
-        <p className="confirmed-text">Booking has been confirmed!</p>
-      </div>
+      <Title text={"Booking has been confirmed!"} />
       <Main />
-
       <Footer />
     </div>
   );

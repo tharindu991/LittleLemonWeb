@@ -24,10 +24,10 @@ const Nav = () => {
             <Link to="/about">About</Link>
           </li>
           <li className="option" onClick={closeMobileMenu}>
-            <Link to="/about">Menu</Link>
+            <Link to="/menu">Menu</Link>
           </li>
           <li className="option" onClick={closeMobileMenu}>
-            <Link to="/Booking">Reservations</Link>
+            <Link to="/booking">Reservations</Link>
           </li>
           <li className="option" onClick={closeMobileMenu}>
             <Link to="/order">Order Online</Link>

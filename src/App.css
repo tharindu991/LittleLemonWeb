@@ -1,16 +1,10 @@
 .App {
   display: grid;
 
-  /* height: 100vh; */
-
   grid-template-areas:
     "nav "
     "main"
     "footer";
-
-  /* grid-template-rows: 1fr 20fr 1fr; */
-
-  /* grid-template-columns: 150px 1fr; */
 }
 
 Main {
@@ -41,7 +35,6 @@ h3 {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  /* grid-template-columns: 50% 50%; */
   height: 400px;
 }
 
@@ -62,6 +55,10 @@ h3 {
   display: grid;
   grid-template-columns: 50% 50%;
 }
+.hero-content-container h2 {
+  margin: 1px;
+}
+
 .hero-content {
   display: flex;
   justify-content: right;
@@ -127,6 +124,13 @@ h3 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+@media (max-width: 900px) {
+  .actions-container {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
 }
 
 .global-padding-vertical {
@@ -295,7 +299,7 @@ h3 {
     grid-gap: 0px;
   }
   .nav-options.active {
-    background: #000;
+    background: #6e6f6e;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
@@ -317,7 +321,8 @@ h3 {
   }
 
   .option a {
-    color: #fff;
+    color: #f4ce14;
+    font-size: large;
   }
 }
 .mobile-menu {
@@ -327,15 +332,11 @@ h3 {
 /* booking form */
 .booking-page-container {
   display: flex;
+  flex-direction: column;
   flex: 1;
-  justify-content: center;
   align-items: center;
-  /* padding-left: 28%; */
-  /* background-image
-  : url("assets/table.jpg"); */
   background: url("assets/table.png") no-repeat;
   background-position: 50% 50%;
-  /* background-size: 100vw; */
   height: 90vh;
 }
 
@@ -345,12 +346,10 @@ h3 {
   border-width: 5px;
   border-style: solid;
   border-radius: 5px;
-
   padding: 20px;
   display: grid;
   width: 300px;
   gap: 20px;
-
   height: 450px;
   background-color: #ffffff;
 }
@@ -364,7 +363,6 @@ h3 {
 .form-field-container {
   padding: 10px;
   background-color: #edefee;
-  /* border: 1px solid rgb(224, 204, 204); */
   border-radius: 4px;
 }
 
@@ -386,7 +384,8 @@ h3 {
 @media (max-width: 900px) {
   .footer-container {
     grid-template-columns: 1fr;
-    /* height: min-content; */
+    padding-left: 15%;
+    padding-right: 15%;
   }
 }
 
@@ -407,13 +406,14 @@ footer section {
   margin: 10px;
 }
 
-.confirmed-booking-container {
+/* confirmed page */
+.title-container {
   display: flex;
   justify-content: center;
   padding: 20px;
 }
 
-.confirmed-text {
+.title-text {
   font-weight: 600;
   font-size: 25px;
 }
