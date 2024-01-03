@@ -1,7 +1,7 @@
 const Title = (props) => {
   return (
     <div className="global-padding-vertical title-container">
-      <p className="title-text">{props.text}</p>
+      <h3>{props.text}</h3>
     </div>
   );
 };
