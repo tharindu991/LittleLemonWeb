@@ -1,6 +1,6 @@
 import delivery from "../assets/delivery.png";
 
-function Card(props) {
+const Card = (props) => {
   const { name, image, description, actionText, price, onClick } = props;
   return (
     <div className="card-container">
@@ -20,6 +20,6 @@ function Card(props) {
       </div>
     </div>
   );
-}
+};
 
 export default Card;

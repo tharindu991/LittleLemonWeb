@@ -1,7 +1,7 @@
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
 
-function Hero() {
+const Hero = () => {
   const navigate = useNavigate();
 
   return (
@@ -26,6 +26,6 @@ function Hero() {
       <div />
     </div>
   );
-}
+};
 
 export default Hero;

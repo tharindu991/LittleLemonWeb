@@ -15,8 +15,6 @@ const BookingForm = (props) => {
     submitForm,
   } = props;
 
-  // var defaultDate = date.toISOString().substring(0, 10);
-
   const handleAvailableTimes = (selectedDate) => {
     setDate(new Date(selectedDate));
     dispatchAvailableTimes(new Date(selectedDate));

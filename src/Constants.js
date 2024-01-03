@@ -1,6 +1,5 @@
 import salad from "./assets/greek_salad.jpg";
 import lemon_dessert from "./assets/lemon_dessert.jpg";
-// import mario from "./assets/Mario.jpg";
 
 export const specials = [
   {

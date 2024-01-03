@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
-function Footer() {
+const Footer = () => {
   return (
     <footer className="footer-container">
       <section>
-        <img src="logo.png" />
+        <img src="logo.png" alt="little lemon" />
         <p className="footer-item">
           We are a family owned meterranean restaurant, <br />
           focused on traditional recipes <br />
@@ -56,6 +56,6 @@ function Footer() {
       </section>
     </footer>
   );
-}
+};
 
 export default Footer;

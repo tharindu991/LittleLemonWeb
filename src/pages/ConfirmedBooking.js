@@ -3,7 +3,7 @@ import Nav from "../components/Nav";
 import Main from "../components/Main";
 import Title from "../components/Title";
 
-function Home() {
+const Home = () => {
   return (
     <div>
       <Nav />
@@ -12,6 +12,6 @@ function Home() {
       <Footer />
     </div>
   );
-}
+};
 
 export default Home;
