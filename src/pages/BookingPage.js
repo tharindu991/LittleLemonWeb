@@ -9,8 +9,6 @@ import { useNavigate } from "react-router-dom";
 const BookingPage = () => {
   const navigate = useNavigate();
 
-  // const availableTimes = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
-
   const occasions = ["Birthday", "Anniversary"];
 
   const [date, setDate] = useState(new Date());
@@ -18,14 +16,14 @@ const BookingPage = () => {
   const [numOfGuests, setNumOfGuests] = useState(1);
   const [occasion, setOccation] = useState(["Birthday"]);
 
-  //This function will change the availableTimes based on the selected date.
+  // will change the availableTimes based on the selected date.
   const updateTimes = (state, action) => {
     const response = fetchAPI(new Date(action));
 
     return response && response.length !== 0 ? response : state;
   };
 
-  // which will create the initial state for the availableTimes.
+  // will create the initial state for the availableTimes.
   const initializeTimes = (initialAvailableTimes) => [
     ...initialAvailableTimes,
     [],
